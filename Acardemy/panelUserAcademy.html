@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="autor" content="">
-    <title>Acardemy - Ingreso</title>
+    <title>Acardemy - Panel principal</title>
     <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="loginUserAcardemy.css">
+    <link rel="stylesheet" href="panelUserAcardemy.css">
 </head>
  
 <body>
@@ -17,14 +17,14 @@
         <!--Barra de navegacion-->
         <header class="nav">
             <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
+                <a class="enlace" href="panelUserAcademy.html">
                     <ion-icon class="icono" name="school-sharp"></ion-icon>
                     <span class="titulo">Acardemy</span>
                 </a>
             </div>
             <div class="opciones">
                 <ul class="rutas">
-                    <a class="enlace" href="/index">
+                    <a class="enlace" href="/PanelUser">
                         <li class="inicio">Inicio</li>
                     </a>
                     <div class="espacio"></div>
@@ -32,32 +32,16 @@
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/registro">
-                        <li class="registro">Registrarse</li>
+                    <a class="enlace" href="/salir">
+                        <li class="salir">Cerrar sesion</li>
                     </a>
                 </ul>
             </div>
         </header>
         <!--Contenido de la pagina-->
         <div class="contenido">
-            <!--Formulario de registro-->
-            <main class="cuadro">
-                <h1 class="titulo_ingreso">Ingreso de usuario</h1>
-                <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
-                    <div class="input">
-                        <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
-                        <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
-                    </div>
-                    <div class="input">
-                        <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{password}" placeholder="Ingrese su contraseña" required>
-                        <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
-                    </div>
-                </form>
-                <a class="recuperar" th:href="#">¿Olvido su contraseña?</a>
-                <button class="btn">Ingresar</button>
-            </main>
+            <!---->
+
         </div>
         <!--Pie de pagina-->
         <footer class="footer">
@@ -80,7 +64,7 @@
 
     <!--Script-->
     <script 
-        src="loginUserAcardemy.js">
+        src="panelUserAcardemy.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
