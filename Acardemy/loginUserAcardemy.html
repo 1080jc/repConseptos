@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="autor" content="">
-    <title>Acardemy - Registro</title>
+    <title>Acardemy - Ingreso</title>
     <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="registroUserAcardemy.css">
+    <link rel="stylesheet" href="loginUserAcardemy.css">
 </head>
 
 <body>
@@ -42,30 +42,21 @@
         <div class="contenido">
             <!--Formulario de registro-->
             <main class="cuadro">
-                <h1 class="titulo_registro">Registro de usuario</h1>
+                <h1 class="titulo_ingreso">Ingreso de usuario</h1>
                 <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
                     <div class="input">
-                        <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
-                        <input class="ingreso" type="text" th:field="*{nombre}" placeholder="Ingrese su nombre" required>
-                        <div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="error"></div>
-                    </div>
-                    <div class="input">
-                        <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
-                        <input class="ingreso" type="text" th:field="*{apellido}" placeholder="Ingrese su apellido" required>
-                        <div th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" class="error"></div>
-                    </div>
-                    <div class="input">
-                        <ion-icon class="icono_registro" name="mail-outline"></ion-icon>                        
+                        <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>                        
                         <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
-                        <ion-icon class="icono_registro" name="key-outline"></ion-icon>                        
+                        <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>                        
                         <input class="ingreso" type="text" th:field="*{password}" placeholder="Ingrese su contraseña" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                 </form>
-                <button class="btn">Registrar</button>
+                <a class="recuperar" th:href="#">¿Olvido su contraseña?</a>
+                <button class="btn">Ingresar</button>
             </main>
         </div>
         <!--Pie de pagina-->
@@ -89,7 +80,7 @@
 
     <!--Script-->
     <script 
-        src="registroUserAcardemy.js">
+        src="loginUserAcardemy.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
