@@ -4,76 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <title>Acardemy - Recuperar</title>
-    <link rel="favicon" href="/favicon/faviconWhite.jpg" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="recuperarAcardemy.css">
+    <meta name="description" content="Acardemy es una plataforma de aprendizaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan, esta pagina es la de recuperacion de la plataforma">
+    <meta name="autor" content="Julian Cantillo Cortina, Mateo Payares, Luis Goez">
+    <title>Acardemy - Ingreso</title>
+    <link rel="favicon" href="favicon/faviconBlack.jpg" type="icon/jpg" sizes="334x267">
+    <link rel="stylesheet" href="#">
 </head>
 
 <body>
     <!--Pagina-->
     <div class="pagina">
-        <!--Barra de navegacion-->
-        <header class="nav">
-            <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
-                    <ion-icon class="icono" name="school-sharp"></ion-icon>
-                    <span class="titulo">Acardemy</span>
-                </a>
-            </div>
-            <div class="opciones">
-                <ul class="rutas">
-                    <a class="enlace" href="/index">
-                        <li class="inicio">Inicio</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="/informacion">
-                        <li class="informacion">Informacion</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="/login">
-                        <li class="login">Inicio de sesion</li>
-                    </a>
-                </ul>
-            </div>
-        </header>
-        <!--Contenido de la pagina-->
         <div class="contenido">
+            <h1 class="titulo">Acardemy</h1>
+            <p class="texto">Rendirse no es una opcion</p>
             <!--Formulario de registro-->
             <main class="cuadro">
-                <h1 class="titulo_recuperar">Recuperar contraseña</h1>
+                <h1 class="titulo_recuperar">Recupera tu contraseña</h1>
                 <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
                     <div class="input">
-                        <ion-icon class="icono_recuperar" name="mail-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <label class="titulo_recuperar">Correo Electronico</label>
+                        <input class="ingreso" type="email" th:field="*{email}" placeholder="tu.correo@ejemplo.com" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
+                <button class="btn" type="submit">Recuperar contraseña</button>
                 </form>
-                <button class="btn">Recuperar</button>
+                <div class="registrate">
+                    <p class="texto">¿Conoces las credenciales de tu cuenta?<a class="login" href="#">Inicia sesion aqui</a></p>
             </main>
         </div>
-        <!--Pie de pagina-->
-        <footer class="footer">
-            <p class="texto_footer">--------</p>
-            <ul class="rutas_footer">
-                <a class="enlace_footer" href="#">
-                    <li class="">--------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" href="#">
-                    <li class="">----------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" href="#">
-                    <li class="">---------</li>
-                </a>
-            </ul>
-        </footer>
     </div>
 
     <!--Script-->
-    <script src="loginUserrecuperar.js">
+    <script src="loginUserAcardemy.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
