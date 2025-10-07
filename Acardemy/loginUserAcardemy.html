@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acardemy es una plataforma de aprendizaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan, esta pagina es la principal de la plataforma">
+    <meta name="description" content="Acardemy es una plataforma de aprendizaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan, esta pagina es la de ingreso de la plataforma">
     <meta name="autor" content="Julian Cantillo Cortina, Mateo Payares, Luis Goez">
     <title>Acardemy - Ingreso</title>
     <link rel="favicon" href="favicon/faviconBlack.jpg" type="icon/jpg" sizes="334x267">
@@ -31,11 +31,11 @@
                         <input class="ingreso" type="password" th:field="*{password}" placeholder="*********" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
-                </form>
                 <div class="opciones">
                     <a class="recuperar" href="#">¿Olvidaste tu contraseña?</a>
                 </div>
                 <button class="btn" type="submit">Iniciar sesion</button>
+                </form>
                 <div class="registrate">
                     <p class="texto">¿No tienes una cuenta?<a class="singup" href="#">Regístrate aqui</a></p>
             </main>
