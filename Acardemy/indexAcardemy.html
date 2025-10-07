@@ -4,76 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <title>Acardemy</title>
+    <meta name="description" content="Acardemy es una plataforma de aprendizaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan, esta pagina es la principal de la plataforma">
+    <meta name="autor" content="Julian Cantillo Cortina, Mateo Payares, Luis Goez">
+    <title>Acardemy - Inicio</title>
     <link rel="favicon" href="favicon/faviconBlack.jpg" sizes="334x267">
-    <link rel="stylesheet" href="indexAcardemy.css">
+    <link rel="stylesheet" href="#">
 </head>
 
 <body>
     <!--Pagina-->
     <div class="pagina">
-        <!--Barra de navegacion-->
-        <header class="nav">
+        <!--Logo de pagina-->
+        <header class="cabecera">
             <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
-                    <ion-icon class="icono" name="school-sharp"></ion-icon>
-                    <span class="titulo">Acardemy</span>
+                <a class="enlace_logo" href="#">
+                    <span class="nombre">Acardemy</span>
                 </a>
             </div>
+            <!--Menu de navegacion-->
+            <div class="nav">
+                <nav class="navegacion">
+                    <ul class="menu">
+                        <a class="enlace_nav" href="#caracteristicas">
+                            <li class="caracteristicas">Caracteristicas</li>
+                        </a>
+                        <a class="enlace_nav" href="#funcionamiento">
+                            <li class="funcionamiento">Como funciona</li>
+                        </a>
+                        <a class="enlace_nav" href="#contacto">
+                            <li class="contacto">Contacto</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+            <!--Menu de opciones-->
             <div class="opciones">
-                <ul class="rutas">
-                    <a class="enlace" href="indexAcardemy.html">
-                        <li class="inicio">Inicio</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="informacion">
-                        <li class="informacion">Informacion</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="loginUserAcardemy.html">
-                        <li class="login">Inicia Sesion</li>
-                    </a>
-                </ul>
+                <a class="enlace_opciones" href="#">
+                    <button class="login">Iniciar Sesión</button>
+                </a>
+                <a class="enlace_opciones" href="#">
+                    <button class="singup">Registrate</button>
+                </a>
             </div>
         </header>
-        <!--Cabecera-->
-        <div class="cabecera">
-            <h2 class="subtitulo">Organiza tus temas y estudialos donde quieras</h2>
-            <p class="texto">una plataforma de aprendisaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan</p>
+        <!--Contenido principal-->
+        <div class="contenido_principal">
+            <span class="mensage">¡Estudio Personalizado al 100%!</span>
+            <h2 class="titulo">Memoriza Mas Rapido con Flashdards Inteligentes.</h2>
+            <p class="texto">Acardemy es la plataforma definitiva para estudiantes que buscan **eficiencia y retencion**, Crear mazos, repasaconstantemente y mejora tu rendimiento academico.</p>
+            <div class="area_btn">
+                <a class="enlace_principal" href="#">
+                    <button class="empezar">Comienza Gratis</button>
+                </a>
+            </div>
         </div>
-        <!--Contenido de pagina-->
-        <div class="contenido">
-            <section class="seccion">
-                <div class="introduccion">
-                    <h1 class="pregunta">¿Que es Acardemy?</h1>
-                    <p class="respuesta">Es una herramienta para ayudar a aquellas personas que les cueste recordar o memorizarse palabras o conseptos de temas, materias o cualquier tipo de area en la que quiera estudias, ideal para estudiantes de cualquier tipo ya sea en
-                        algun instituto o de forma autodidacta.------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        <!--Contenido secundario-->
+        <div class="contenido_secundario">
+            <div class="imagen">
+                <img class="img" src="img/estudio.png" alt="Interfaz de creacion de flashcards simulada">
+                <p class="texto_imagen">Diseño limpio y centrado para un estudio sin distracciones.</p>
+            </div>
+        </div>
+        <!--Caracteristicas-->
+        <div id="caracteristicas" class="caracteristicas">
+            <h2 class="titulo_carac">¿Por que Acardemy?</h2h>
+            <p class="texto_carac">Una herramienta potente diseñada para la retencion a largo plazo.</p>
+            <div class="puntos">
+                <div class="carac1">
+                    <ion-icon class="icono" name="flash-outline"></ion-icon>
+                    <h3 class="subtitulo">Creacion rapida y organizada</h3>
+                    <p class="texto_caract">Crea targetas frente/reverso en segundos. Organiza tus mazos por materias y temas, manteniendo tu materialde estudio bajo control.</p>
                 </div>
-                <div class="foto">
+                <div class="carac2">
+                    <ion-icon class="icono" name="repeat-outline"></ion-icon>
+                    <h3 class="subtitulo">Flujo de estudio inteactivo</h3>
+                    <p class="texto_caract">Repasa tus targetas marcando tu nivel de dificultad (Facil, Medio, Dificil). El sistema te indicara cuando es el momento optimo para volver a ellas.</p>
                 </div>
-            </section>
-            <a class="enlace" href="registroUserAcardemy.html">
-                <button class="btn">Registrarse</button>
-            </a>
+                <div class="carac3">
+                    <ion-icon class="icono" name="bar-chart-outline"></ion-icon>
+                    <h3 class="subtitulo">Multiplataforma y siempre disponible</h3>
+                    <p class="texto_caract">Accede a tus targetas desde cualquier computadora. Construida con Spring Boot, garantiza velocidad y una base de datos segura.</p>
+                </div>
+            </div>
+        </div>
+        <!--Funcionamiento-->
+        <div id="funcionamiento" class="funcionamiento">
+            <h2 class="titulo_func">Empieza a dominar en 3 pasos sencillos</h2>
+            <div class="pasos">
+                <div class="func1">
+                    <h1 class="numero">1</h1>
+                    <h3 class="subtitulo">Crea tu mazo</h3>
+                    <p class="texto_caract">Define una materia o categoria y añade todas las tarjetas que necesites.</p>
+                </div>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+                <div class="func2">
+                    <h1 class="numero">2</h1>
+                    <h3 class="subtitulo">Inicia el repaso</h3>
+                    <p class="texto_caract">Voltea la targeta, evalua tu conocimiento y marca la dificultad.</p>
+                </div>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+                <div class="func3">
+                    <h1 class="numero">3</h1>
+                    <h3 class="subtitulo">Domina el contenido</h3>
+                    <p class="texto_caract">Acardemy te ayuda a enfocarte en lo que mas te cuesta recordar.</p>
+                </div>
+            </div>
         </div>
         <!--Pie de pagina-->
-        <footer class="footer">
-            <p class="texto_footer">--------</p>
-            <ul class="rutas_footer">
-                <a class="enlace_footer" th:href="@{#}">
-                    <li class="">--------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" th:href="@{#}">
-                    <li class="">----------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" th:href="@{#}">
-                    <li class="">---------</li>
-                </a>
-            </ul>
+        <footer class="contacto" id="contacto">
+            <div class="info_contacto">
+                <div class="informacion">
+                    <span class="nombre_footer">Acardemy</span>
+                    <p class="texto_footer">Apoyo academico digital para el exito estudiantil.</p>
+                </div>
+                <div class="producto">
+                    <h3 class="subtitulo_footer">Producto</h3>
+                    <ul>
+                        <li><a href="#caracteristicas">Caracteristicas</a></li>
+                        <li><a href="#">Crear cuanta</a></li>
+                    </ul>
+                </div>
+                <div class="siguenos">
+                    <h3 class="subtitulo_footer">Siguenos</h3>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="texto_copyright">© 2025 Acardemy. Todos los derechos reservados.</p>
+            </div>
         </footer>
     </div>
 
