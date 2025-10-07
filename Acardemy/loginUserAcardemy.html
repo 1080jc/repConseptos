@@ -14,68 +14,32 @@
 <body>
     <!--Pagina-->
     <div class="pagina">
-        <!--Barra de navegacion-->
-        <header class="nav">
-            <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
-                    <ion-icon class="icono" name="school-sharp"></ion-icon>
-                    <span class="titulo">Acardemy</span>
-                </a>
-            </div>
-            <div class="opciones">
-                <ul class="rutas">
-                    <a class="enlace" href="indexAcardemy.html">
-                        <li class="inicio">Inicio</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="informacion">
-                        <li class="informacion">Informacion</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="registroUserAcardemy.html">
-                        <li class="registro">Registrarse</li>
-                    </a>
-                </ul>
-            </div>
-        </header>
-        <!--Contenido de la pagina-->
         <div class="contenido">
+            <h1 class="titulo">Acardemy</h1>
+            <p class="texto">El futuro de tu estudio</p>
             <!--Formulario de registro-->
             <main class="cuadro">
-                <h1 class="titulo_ingreso">Ingreso de usuario</h1>
+                <h1 class="titulo_ingreso">Inicia sesion en tu cuenta</h1>
                 <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
                     <div class="input">
-                        <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>                        
-                        <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <label class="titulo_ingreso">Correo Electronico</label>
+                        <input class="ingreso" type="email" th:field="*{email}" placeholder="tu.correo@ejemplo.com" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
-                        <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>                        
-                        <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        <label class="titulo_ingreso">Contraseña</label>
+                        <input class="ingreso" type="password" th:field="*{password}" placeholder="*********" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                 </form>
-                <a class="recuperar" href="recuperarAcardemy.html">¿Olvido su contraseña?</a>
-                <button class="btn">Ingresar</button>
+                <div class="opciones">
+                    <a class="recuperar" href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button class="btn" type="submit">Iniciar sesion</button>
+                <div class="registrate">
+                    <p class="texto">¿No tienes una cuenta?<a class="singup" href="#">Regístrate aqui</a></p>
             </main>
         </div>
-        <!--Pie de pagina-->
-        <footer class="footer">
-            <p class="texto_footer">--------</p>
-            <ul class="rutas_footer">
-                <a class="enlace_footer" href="#">
-                    <li class="">--------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" href="#">
-                    <li class="">----------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" href="#">
-                    <li class="">---------</li>
-                </a>
-            </ul>
-        </footer>
     </div>
 
     <!--Script-->
