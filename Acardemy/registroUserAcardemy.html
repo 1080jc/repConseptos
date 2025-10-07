@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Acardemy - Registro</title>
-    <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
+    <link rel="favicon" href="favicon/faviconBlack.jpg" type="icon/jpg" sizes="334x267">
     <link rel="stylesheet" href="registroUserAcardemy.css">
 </head>
 
@@ -24,15 +24,15 @@
             </div>
             <div class="opciones">
                 <ul class="rutas">
-                    <a class="enlace" href="/index">
+                    <a class="enlace" href="indexAcardemy.html">
                         <li class="inicio">Inicio</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/informacion">
+                    <a class="enlace" href="informacion">
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/loginUser">
+                    <a class="enlace" href="loginUserAcardemy.html">
                         <li class="login">Inicia Sesion</li>
                     </a>
                 </ul>
@@ -56,12 +56,12 @@
                     </div>
                     <div class="input">
                         <ion-icon class="icono_registro" name="mail-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_registro" name="key-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                 </form>

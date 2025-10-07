@@ -7,10 +7,10 @@
     <meta name="description" content="">
     <meta name="autor" content="">
     <title>Acardemy - Ingreso</title>
-    <link rel="favicon" href="@{/favicon/faviconWhite.jpg}" type="icon/jpg" sizes="334x267">
+    <link rel="favicon" href="favicon/faviconBlack.jpg" type="icon/jpg" sizes="334x267">
     <link rel="stylesheet" href="loginUserAcardemy.css">
 </head>
- 
+
 <body>
     <!--Pagina-->
     <div class="pagina">
@@ -24,15 +24,15 @@
             </div>
             <div class="opciones">
                 <ul class="rutas">
-                    <a class="enlace" href="/index">
+                    <a class="enlace" href="indexAcardemy.html">
                         <li class="inicio">Inicio</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/informacion">
+                    <a class="enlace" href="informacion">
                         <li class="informacion">Informacion</li>
                     </a>
                     <div class="espacio"></div>
-                    <a class="enlace" href="/registro">
+                    <a class="enlace" href="registroUserAcardemy.html">
                         <li class="registro">Registrarse</li>
                     </a>
                 </ul>
@@ -46,16 +46,16 @@
                 <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="mail-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
                         <ion-icon class="icono_ingreso" name="key-outline"></ion-icon>                        
-                        <input class="ingreso" type="text" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
                 </form>
-                <a class="recuperar" th:href="#">¿Olvido su contraseña?</a>
+                <a class="recuperar" href="recuperarAcardemy.html">¿Olvido su contraseña?</a>
                 <button class="btn">Ingresar</button>
             </main>
         </div>
@@ -79,8 +79,7 @@
     </div>
 
     <!--Script-->
-    <script 
-        src="loginUserAcardemy.js">
+    <script src="loginUserAcardemy.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
