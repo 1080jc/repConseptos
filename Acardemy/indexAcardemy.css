@@ -3,29 +3,35 @@
 /* Variables */
 
 :root {
-    --color-navBar:  #5952D4;
-    --color-backgraund-uno:  #CBC8E3;
-    --color-backgraund-dos:  #D9D7E8;
-    --color-backgraund-tres:  #FAFAFA;
-    --color-text-uno:  #000000;
-    --color-text-dos:  #FFFFFF;
-    --color-btn:  #6FAEF6;
-    --color-footer:  #1D4273;
+    --color-backgraund-oscuro:  #F9FAFB;
+    --color-backgraund-claro:  #FFFFFF;
+    --color-backgraund-detalles:  #E0E7FF;
+    --color-text-principal:  #4338CA;
+    --color-text-secundario:  #111827;
+    --color-text-terciario:  #5E5DEE;
+    --color-text-cuarto:  #4B5563;
     --color-text-hover:  #BAC8FF;
-    --color-shadow:  #1F1F1F;
+    --color-btn:  #4F46E5;
+    --color-hover-btn:  #4338CA;
+    --color-shadow:  #C7D2FE;
+    --color-footer:  #1F2937;
+    --color-targeta-uno: #EEF2FF;
+    --color-targeta-dos: #F0FDF4;
+    --color-targeta-tres: #FEFCE8;
 }
 
 
 /* Cuerpo de la pagina */
 
 body {
-    background-color: var(--color-backgraund-uno);
+    background-color: var(--color-backgraund-oscuro);
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .pagina {
+    background-color: var(--color-backgraund-oscuro);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -33,205 +39,162 @@ body {
 }
 
 
-/*Barra de navegacion */
+/* Logo de pagina */
 
-.nav {
-    background-color: var(--color-navBar);
+.cabecera {
+    background-color: var(--color-backgraund-claro);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 15px;
+    padding: 25px;
     height: 25px;
+    box-shadow: 0px 4px 8px var(--color-shadow);
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: auto;
-    height: 30px;
-    margin-left: 30px;
+    height: auto;
+    margin-left: 20px;
 }
 
-.enlace {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.enlace_logo {
     text-decoration: none;
+    height: 30px;
+    width: auto;
+    height: auto;
+    cursor: default;
+}
+
+.nombre {
+    color: var(--color-text-principal);
+    font-size: 35px;
+    font-weight: 900;
     cursor: pointer;
 }
 
-.icono {
-    color: var(--color-text-uno);
-    font-size: 30px;
-    margin-right: 10px;
+
+/* Menu de navegacion */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
 }
 
-.titulo {
-    color: var(--color-text-uno);
-    font-size: 25px;
-    font-weight: 800;
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
 }
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.enlace_nav {
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    margin-inline-start: 25px;
+}
+
+.caracteristicas {
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--color-backgraund-claro);
+    color: var(--color-text-cuarto);
+}
+
+.funcionamiento {
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--color-backgraund-claro);
+    color: var(--color-text-cuarto);
+}
+
+.contacto {
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--color-backgraund-claro);
+    color: var(--color-text-cuarto);
+}
+
+
+/* Menu de opciones */
 
 .opciones {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 35px;
-    width: auto;
-    margin-right: 30px;
+    align-items: center; 
+    margin-right: 50px;
 }
 
-.rutas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    height: 35px;
-    width: auto;
-}
-
-.inicio {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.informacion {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+.enlace_opciones {
+    text-decoration: none;
+    text-align: center;
+    margin-inline-start: 25px;
 }
 
 .login {
-    color: var(--color-text-uno);
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 5px;
-}
-
-.espacio {
-    border: solid 1px var(--color-text-uno);
-    width: 0, 5px;
-    height: 15px;
-}
-
-
-/* Cabecera de la pagina */
-
-.cabecera {
-    background-image: url("img/fondoLibros.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--color-text-dos);
-    height: 180px;
-    width: auto;
-    text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px
-}
-
-.subtitulo {
-    font-size: 30px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 35px;
-}
-
-.texto {
-    font-size: 17px;
-    font-weight: 400;
-}
-
-
-/* Contenido de seccion de pagina */
-
-.contenido {
-    background-color: var(--color-backgraund-uno);
-    width: auto;
-    height: auto;
-}
-
-.seccion {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: auto;
-}
-
-.introduccion {
-    padding-right: 80px;
-    height: auto;
-    width: 50%;
-}
-
-.pregunta {
-    color: var(--color-text-uno);
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.respuesta {
-    color: var(--color-text-uno);
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.foto {
-    border: solid;
-    width: 50%;
-    height: auto;
-}
-
-.btn {
-    background-color: var(--color-btn);
-    color: var(--color-text-uno);
-    margin-left: 100px;
-    margin-bottom: 20px;
-    width: 200px;
+    border: none;
+    width: 120px;
     height: 40px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-/* footer de la pagina */
-
-.footer {
-    background-color: var(--color-footer);
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.texto_footer {
-    color: var(--color-text-uno);
-    margin: 20px;
+    border-radius: 10px;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--color-backgraund-claro);
+    color: var(--color-btn);
 }
 
-.rutas_footer {
-    margin-right: 40px;
-    list-style: none;
-    width: auto;
-    height: auto;
-}
-
-.enlace_footer {
-    text-decoration: none;
-    text-align: left;
+.singup {
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--color-btn);
+    color: var(--color-backgraund-claro);
 }
+
+/* Contenido principal */
+
+.contenido_principal {
+    margin-top: 75px;
+}
+
+
+
+
+
 
 
 /* Animaciones de la pagina */
