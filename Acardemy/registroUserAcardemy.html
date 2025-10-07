@@ -4,92 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="autor" content="">
-    <title>Acardemy - Registro</title>
+    <meta name="description" content="Acardemy es una plataforma de aprendizaje por medio de flashcards para ayudarte a recordar esos temas que mas se te dificultan, esta pagina es la principal de la plataforma">
+    <meta name="autor" content="Julian Cantillo Cortina, Mateo Payares, Luis Goez">
+    <title>Acardemy - registro</title>
     <link rel="favicon" href="favicon/faviconBlack.jpg" type="icon/jpg" sizes="334x267">
-    <link rel="stylesheet" href="registroUserAcardemy.css">
+    <link rel="stylesheet" href="#">
 </head>
 
 <body>
     <!--Pagina-->
     <div class="pagina">
-        <!--Barra de navegacion-->
-        <header class="nav">
-            <div class="logo">
-                <a class="enlace" href="indexAcardemy.html">
-                    <ion-icon class="icono" name="school-sharp"></ion-icon>
-                    <span class="titulo">Acardemy</span>
-                </a>
-            </div>
-            <div class="opciones">
-                <ul class="rutas">
-                    <a class="enlace" href="indexAcardemy.html">
-                        <li class="inicio">Inicio</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="informacion">
-                        <li class="informacion">Informacion</li>
-                    </a>
-                    <div class="espacio"></div>
-                    <a class="enlace" href="loginUserAcardemy.html">
-                        <li class="login">Inicia Sesion</li>
-                    </a>
-                </ul>
-            </div>
-        </header>
-        <!--Contenido de la pagina-->
         <div class="contenido">
+            <h1 class="titulo">Acardemy</h1>
+            <p class="texto">Comienza tu camino al exito academico.</p>
             <!--Formulario de registro-->
             <main class="cuadro">
-                <h1 class="titulo_registro">Registro de usuario</h1>
+                <h1 class="titulo_registro">Crea tu cuenta Acardemy</h1>
                 <form class="formulario" th:action="@{#}" th:object="${#}" method="post">
                     <div class="input">
-                        <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
-                        <input class="ingreso" type="text" th:field="*{nombre}" placeholder="Ingrese su nombre" required>
+                        <label class="titulo_registro">Nombre</label>
+                        <input class="ingreso" type="text" th:field="*{nombre}" placeholder="Tu nombre" required>
                         <div th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" class="error"></div>
                     </div>
                     <div class="input">
-                        <ion-icon class="icono_registro" name="person-circle-outline"></ion-icon>
-                        <input class="ingreso" type="text" th:field="*{apellido}" placeholder="Ingrese su apellido" required>
+                        <label class="titulo_registro">Apellido</label>
+                        <input class="ingreso" type="text" th:field="*{apellido}" placeholder="Tu apellido" required>
                         <div th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" class="error"></div>
                     </div>
                     <div class="input">
-                        <ion-icon class="icono_registro" name="mail-outline"></ion-icon>                        
-                        <input class="ingreso" type="email" th:field="*{email}" placeholder="Ingrese su correo" required>
+                        <label class="titulo_registro">Correo Electronico</label>
+                        <input class="ingreso" type="email" th:field="*{email}" placeholder="tu.correo@ejemplo.com" required>
                         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
                     </div>
                     <div class="input">
-                        <ion-icon class="icono_registro" name="key-outline"></ion-icon>                        
-                        <input class="ingreso" type="password" th:field="*{password}" placeholder="Ingrese su contraseña" required>
+                        <label class="titulo_registro">Contraseña</label>
+                        <input class="ingreso" type="password" th:field="*{password}" placeholder="Minimo 6 caracteres" required>
                         <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
                     </div>
+                    <div class="input">
+                        <label class="titulo_registro">Confirmar Contraseña</label>
+                        <input class="ingreso" type="password" th:field="*{password2}" placeholder="Repite tu contraseña" required>
+                        <div th:if="${#fields.hasErrors('password2')}" th:errors="*{password2}" class="error"></div>
+                    </div>
+                    <button class="btn" type="submit">Registrarse</button>
                 </form>
-                <button class="btn">Registrar</button>
+                <div class="registrate">
+                    <p class="texto">¿Ya tienes una cuenta?<a class="singup" href="#">Inicia sesion aqui</a></p>
             </main>
         </div>
-        <!--Pie de pagina-->
-        <footer class="footer">
-            <p class="texto_footer">--------</p>
-            <ul class="rutas_footer">
-                <a class="enlace_footer" href="#">
-                    <li class="">--------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" href="#">
-                    <li class="">----------------</li>
-                </a>
-                <br>
-                <a class="enlace_footer" href="#">
-                    <li class="">---------</li>
-                </a>
-            </ul>
-        </footer>
     </div>
 
     <!--Script-->
-    <script 
-        src="registroUserAcardemy.js">
+    <script src="loginUserAcardemy.js">
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
