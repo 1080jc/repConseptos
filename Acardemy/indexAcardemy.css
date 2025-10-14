@@ -12,7 +12,7 @@
     --color-text-cuarto:  #4B5563;
     --color-text-hover:  #BAC8FF;
     --color-btn:  #4F46E5;
-    --color-hover-btn:  #4338CA;
+    --color-hover-btn:  #2a1dc0;
     --color-shadow:  #C7D2FE;
     --color-footer:  #1F2937;
     --color-targeta-uno: #EEF2FF;
@@ -199,27 +199,32 @@ body {
 
 /* Animaciones de la pagina */
 
-.enlace:hover .inicio {
-    color: var(--color-text-hover);
+.enlace_nav:hover .caracteristicas {
+    color: var(--color-text-terciario);
     transition: 0.3s;
     cursor: pointer;
 }
 
-.enlace:hover .informacion {
-    color: var(--color-text-hover);
+.enlace_nav:hover .funcionamiento {
+    color: var(--color-text-terciario);
     transition: 0.3s;
     cursor: pointer;
 }
 
-.enlace:hover .login {
-    color: var(--color-text-hover);
+.enlace_nav:hover .contacto {
+    color: var(--color-text-terciario);
     transition: 0.3s;
     cursor: pointer;
 }
 
-.btn:hover {
-    box-shadow: 0px 4px 8px var(--color-shadow);
+.enlace_opciones:hover .login {
     background-color: var(--color-text-hover);
-    cursor: pointer;
     transition: 0.3s;
+    cursor: pointer;
+}
+
+.enlace_opciones:hover .singup {
+    background-color: var(--color-hover-btn);
+    transition: 0.3s;
+    cursor: pointer;
 }
